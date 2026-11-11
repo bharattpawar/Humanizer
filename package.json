@@ -1,0 +1,19 @@
+{
+  "name": "Humanizer",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"bun run --cwd apps/client dev\"",
+    "build": "bun run --cwd apps/client build",
+    "test:deepseek": "bun run --cwd apps/client test:deepseek",
+    "start": "bun run --cwd apps/client start",
+    "test:db": "bun run --cwd apps/client test:db"
+  },
+  "devDependencies": {
+    "concurrently": "10.0.6",
+    "@types/node": "26.6.6",
+    "typescript": "7.0.2"
+  }
+}
